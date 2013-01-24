@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Narya::Client::VERSION
   gem.authors       = ["LupineDev"]
   gem.email         = ["chris@lupinedev.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Client for interacting with Naria http API}
+  gem.summary       = %q{Client for interacting with Naria http API}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
