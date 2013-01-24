@@ -3,6 +3,10 @@ require 'rest-client'
 
 module Narya
   module Client
-    # Your code goes here...
+    String.class_eval do
+      def profane?
+        false
+      end
+    end
   end
 end
