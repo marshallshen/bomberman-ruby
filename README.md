@@ -1,20 +1,16 @@
 # Narya::Client
 
-TODO: Write a gem description
+Client for Narya API
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Gem is not published yet.  To build from source follow these steps...
 
-    gem 'narya-client'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install narya-client
+```
+bundle
+gem build narya-client.gemspec
+gem install narya-client-0.0.1.gem
+```
 
 ## Usage
 
