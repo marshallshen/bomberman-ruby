@@ -34,5 +34,6 @@ module Narya::Client
       end
       self
     end
+    alias setup reset
   end
 end
