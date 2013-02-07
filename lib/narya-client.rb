@@ -1,5 +1,6 @@
 require 'narya-client/configuration'
 require 'narya-client/connection'
+require 'narya-client/error'
 require 'narya-client/profanity'
 require 'narya-client/string_utils'
 require 'narya-client/version'

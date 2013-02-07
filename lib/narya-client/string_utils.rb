@@ -3,7 +3,7 @@ module Narya
     module StringUtils
       String.class_eval do
         def profane?
-          false
+          Narya::Client::Profanity.profane?(self) if Narya::Client.include_string_utils
         end
       end
     end

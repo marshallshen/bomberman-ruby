@@ -5,14 +5,13 @@ module Narya
         request = Narya::Client.connection.get do |req|
           req.url "v#{Narya::Client.api_version}/profanity/check", corpus: corpus
         end
-        puts request.body.inspect
-        puts request.status.inspect
+
         if request.status == 200
           request.body.eql?("1") ? true : false
         elsif request.status == 400
-          raise Narya::Client::Error::BadReques
+          raise Narya::Client::BadRequest
         elsif request.status == 401
-          raise Narya::Client::Error::Unauthorized
+          raise Narya::Client::Unauthorized
         end
       end
     end
