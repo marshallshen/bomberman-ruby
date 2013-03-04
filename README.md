@@ -59,13 +59,14 @@ If you would like to save or display text where the profane words (if
 any) are obfuscated the `.censor(corpus, replacement_text)` method is
 what you are looking for.
 
-    :::ruby
-    non_profane_text = "The quick brown fox jumped over the lazy dog."
-    Bomberman::Profanity.censor(non_profane_text, "####")
-      #=> "The quick brown fox jumped over the lazy dog."
-    profane_text = "The quick brown fox jumped over the F-BOMBing lazy dog."
-    Bomberman::Profanity.censor(profane_text, "####")
-      #=> "The quick brown fox jumped over the ### lazy dog."
+```ruby
+non_profane_text = "The quick brown fox jumped over the lazy dog."
+Bomberman::Profanity.censor(non_profane_text, "####")
+  #=> "The quick brown fox jumped over the lazy dog."
+profane_text = "The quick brown fox jumped over the F-BOMBing lazy dog."
+Bomberman::Profanity.censor(profane_text, "####")
+  #=> "The quick brown fox jumped over the ### lazy dog."
+```
 
 The `replacement_text` parameter is a string and optional. `"***"` is
 suppled by default.
