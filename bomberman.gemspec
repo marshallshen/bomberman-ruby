@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'narya-client/version'
+require 'bomberman/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "narya-client"
-  gem.version       = Narya::Client::VERSION
+  gem.name          = "bomberman"
+  gem.version       = Bomberman::VERSION
   gem.authors       = ["LupineDev"]
   gem.email         = ["chris@lupinedev.com"]
-  gem.description   = %q{Client for interacting with Naria http API}
-  gem.summary       = %q{Client for interacting with Naria http API}
+  gem.description   = %q{Client for interacting with Bomberman http API}
+  gem.summary       = %q{Client for interacting with Bomberman http API}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

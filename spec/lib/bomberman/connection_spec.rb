@@ -1,23 +1,23 @@
 require 'spec_helper'
 
 
-describe Narya::Client::Connection do
+describe Bomberman::Connection do
   before :all do
-    Narya::Client.configure {}
+    Bomberman.configure {}
   end
 
   it 'should inherit from Faraday::Connection' do
-    Narya::Client::Connection.new.should be_a(Faraday::Connection)
+    Bomberman::Connection.new.should be_a(Faraday::Connection)
   end
 
   describe "constructor" do
     before :all do
-      @connection = Narya::Client::Connection.new
+      @connection = Bomberman::Connection.new
     end
 
     it "should initialize with url based on config values" do
-      @connection.host.should eq(Narya::Client.url)
-      @connection.scheme.should eq(Narya::Client.protocol)
+      @connection.host.should eq(Bomberman.url)
+      @connection.scheme.should eq(Bomberman.protocol)
     end
 
     it "should set the headers with application/json content type" do
@@ -25,7 +25,7 @@ describe Narya::Client::Connection do
     end
 
     it "should set the headers correct api authorization params" do
-      auth_headers = "Token token=#{Narya::Client.api_key}"
+      auth_headers = "Token token=#{Bomberman.api_key}"
       @connection.headers['Authorization'].should eq(auth_headers)
     end
   end

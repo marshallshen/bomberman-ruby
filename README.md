@@ -1,6 +1,6 @@
-# Narya::Client
+# Bomberman
 
-Client for Narya API
+Client for Bobmerman API
 
 ## Installation
 
@@ -8,11 +8,11 @@ Gem is not published yet.  To build from source follow these steps...
 
 ```
 bundle
-gem build narya-client.gemspec
-gem install narya-client-0.0.1.gem
+gem build bomberman.gemspec
+gem install bomberman-CURRENT_VERSION.gem
 ```
 
-## Usage
+# Usage
 
 TODO: Write usage instructions here
 
