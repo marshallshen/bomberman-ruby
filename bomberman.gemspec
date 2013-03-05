@@ -6,8 +6,8 @@ require 'bomberman/version'
 Gem::Specification.new do |gem|
   gem.name          = "bomberman"
   gem.version       = Bomberman::VERSION
-  gem.authors       = ["LupineDev"]
-  gem.email         = ["chris@lupinedev.com"]
+  gem.authors       = ["Ikayzo"]
+  gem.email         = ["chris@ikayzo.com"]
   gem.description   = %q{Client for interacting with Bomberman http API}
   gem.summary       = %q{Client for interacting with Bomberman http API}
   gem.homepage      = ""
