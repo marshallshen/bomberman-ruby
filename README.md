@@ -8,8 +8,7 @@ applications. If you would like to be part of the alpha or early beta
 testing process please email <bomberman-support@ikayzo.com>.
 
 For detailed instructions on installing the addon to your Heroku
-application please see our [add-on documentation
-page](http://bomberman.ikayzo.com/)
+application please see our [add-on documentation page](http://bomberman.ikayzo.com/)
 
 ## Using with Rails 3.x
 
@@ -90,6 +89,7 @@ BomberMan::Profanity.highlight(profane_text, "<blink>", "</blink>")
 The `start_tag` & `end_tag` parameters are strings and optional. A pair
 of opening and closing `<span>` tags are used if none are provided.
 
+For more info on customizing Bomberman please refer to the [add-on documentation](http://bomberman.ikayzo.com/).
 ## Troubleshooting
 
 We are just starting out.  If you experience trouble please contact us
