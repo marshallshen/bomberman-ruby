@@ -8,7 +8,8 @@ applications. If you would like to be part of the alpha or early beta
 testing process please email <bomberman-support@ikayzo.com>.
 
 For detailed instructions on installing the addon to your Heroku
-application please see our [add-on documentation page](http://ikayzo.github.com/narya/)
+application please see our [add-on documentation
+page](http://bomberman.ikayzo.com/)
 
 ## Using with Rails 3.x
 
