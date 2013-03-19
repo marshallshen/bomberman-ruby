@@ -20,4 +20,6 @@ module Bomberman
   class BadGateway < Error; end
 
   class ServiceUnavailable < Error; end
+
+  class LanguageNotSupported < Error; end
 end
