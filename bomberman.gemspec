@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["chris@ikayzo.com"]
   gem.summary       = %q{Shelter from profanity bombing}
   gem.description   = %q{Client for interacting with Bomberman HTTP API. For more information visit http://bomberman.ikayzo.com/}
-  gem.homepage      = "https://github.com/ikayzo/bomberman"
+  gem.homepage      = "https://github.com/ikayzo/bomberman-ruby"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
