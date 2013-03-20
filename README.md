@@ -89,6 +89,19 @@ BomberMan::Profanity.highlight(profane_text, "<blink>", "</blink>")
 The `start_tag` & `end_tag` parameters are strings and optional. A pair
 of opening and closing `<span>` tags are used if none are provided.
 
+
+### Checking Japanese Text for Profanity.
+
+Bomberman supports for checking Japanese text for profanity.
+To do this pass an optional language argument with the value `:jp` as the
+last parameter to any of the `Bomberman::Profanity` methods
+
+```ruby
+non_profane_text = "聖パトリックの日"
+Bomberman::Profanity.profane?(non_profane_text, :jp)
+  #=> false
+```
+
 For more info on customizing Bomberman please refer to the [add-on documentation](http://bomberman.ikayzo.com/).
 ## Troubleshooting
 

@@ -1,9 +1,9 @@
 require 'json'
 module Bomberman
   module Profanity
-    def self.profane?(corpus=nil)
+    def self.profane?(corpus=nil, language=:en)
       request = Bomberman.connection.get do |req|
-        req.url "v#{Bomberman.api_version}/profanity/check", corpus: corpus
+        req.url "#{lang_api_version(language)}/profanity/check", corpus: corpus
       end
 
       validate_status(request)
@@ -13,9 +13,9 @@ module Bomberman
       end
     end
 
-    def self.censor(corpus=nil, replacement_text=nil)
+    def self.censor(corpus=nil, replacement_text=nil, language=:en)
       request = Bomberman.connection.get do |req|
-        req.url "v#{Bomberman.api_version}/profanity/censor", corpus: corpus, replacement_text: replacement_text
+        req.url "#{lang_api_version(language)}/profanity/censor", corpus: corpus, replacement_text: replacement_text
       end
 
       validate_status(request)
@@ -25,9 +25,9 @@ module Bomberman
       end
     end
 
-    def self.highlight(corpus=nil, start_tag=nil, end_tag=nil)
+    def self.highlight(corpus=nil, start_tag=nil, end_tag=nil, language=:en)
       request = Bomberman.connection.get do |req|
-        req.url "v#{Bomberman.api_version}/profanity/highlight", corpus: corpus, start_tag: start_tag, end_tag: end_tag
+        req.url "#{lang_api_version(language)}/profanity/highlight", corpus: corpus, start_tag: start_tag, end_tag: end_tag
       end
 
       validate_status(request)
@@ -38,6 +38,16 @@ module Bomberman
     end
 
     private
+
+    def self.lang_api_version(language=:en)
+      if language == :en
+       "v#{Bomberman.api_version}"
+      elsif language == :jp
+       "#{language}/v#{Bomberman.api_version}"
+      else
+        raise Bomberman::LanguageNotSupported
+      end
+    end
 
     def self.validate_status(request)
       if request.status == 400
