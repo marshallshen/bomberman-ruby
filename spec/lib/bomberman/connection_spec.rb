@@ -17,7 +17,6 @@ describe Bomberman::Connection do
 
     it "should initialize with url based on config values" do
       @connection.host.should eq(Bomberman.url)
-      @connection.scheme.should eq(Bomberman.protocol)
     end
 
     it "should set the headers with application/json content type" do
