@@ -1,6 +1,6 @@
 module Bomberman
   module Configuration
-    VALID_OPTIONS = [:api_key, :api_version, :use_https, :include_string_utils, :url].freeze
+    VALID_OPTIONS = [:api_key, :api_version, :include_string_utils, :url].freeze
     DEFAULT_VALUES = {
         api_key: 'change me',
         api_version: 1,
@@ -17,15 +17,6 @@ module Bomberman
       reset
       yield self
       self
-    end
-
-
-    def protocol
-      if use_https
-        'https'
-      else
-        'http'
-      end
     end
 
     def reset
