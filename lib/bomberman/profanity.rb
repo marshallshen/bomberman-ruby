@@ -54,6 +54,8 @@ module Bomberman
         raise Bomberman::BadRequest
       elsif request.status == 401
         raise Bomberman::Unauthorized
+      elsif request.status == 403
+        raise Bomberman::RateLimitExceeded
       elsif request.status == 500
         raise Bomberman::InternalServerError
       end

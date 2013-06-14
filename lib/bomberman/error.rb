@@ -5,6 +5,8 @@ module Bomberman
 
   class Unauthorized < Error; end
 
+  class RateLimitExceeded < Error; end
+
   class Forbidden < Error; end
 
   class NotFound < Error; end
