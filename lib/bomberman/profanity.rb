@@ -41,9 +41,9 @@ module Bomberman
 
     def self.lang_api_version(language=:en)
       if language == :en
-       "v#{Bomberman.api_version}"
+       "api/v#{Bomberman.api_version}"
       elsif language == :ja
-       "#{language}/v#{Bomberman.api_version}"
+       "api/#{language}/v#{Bomberman.api_version}"
       else
         raise Bomberman::LanguageNotSupported
       end
